@@ -7,6 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="laba2.laba2"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="D:\sentiments.csv"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="D:\states.json"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="laba2"/>
 </launchConfiguration>

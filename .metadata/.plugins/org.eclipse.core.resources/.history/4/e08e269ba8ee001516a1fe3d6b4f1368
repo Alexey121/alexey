@@ -1,0 +1,22 @@
+package laba2;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+
+public class laba2 {
+	
+public static void main(String[] args) throws IOException
+{
+	 BufferedReader br = new BufferedReader(new FileReader(args[0]));
+	 Sentiments sentiments=new Sentiments();
+	 States states=new States();
+	 String str;
+	while((str = br.readLine() ) != null){
+		states = statesParser.Parser(str);
+		states.toString();
+	}
+	 br.close();
+}
+}

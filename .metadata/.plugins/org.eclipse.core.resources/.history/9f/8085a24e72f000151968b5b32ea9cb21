@@ -17,6 +17,7 @@ public class laba2 {
         for(int i=0;i<mas.length;i++){
             str=mas[i];
             state = statesParser.Parser(str);
+            //state.toString();
             masOfState.add(state);
         }
         br.close();

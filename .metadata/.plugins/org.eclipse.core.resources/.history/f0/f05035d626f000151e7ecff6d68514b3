@@ -1,0 +1,69 @@
+package laba2;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class statesParser {
+	static ArrayList<States> statesMAS= new ArrayList<States>();
+	public static States Parser(String[] mas, int c){
+	States object=new States();
+	String str;
+	int i=0;
+	int k=-1;
+	while((str = mas[i] ) != null && i<3539){
+		
+	String findShtat="[A-Z][A-Z]";
+	 Pattern patternShtat=Pattern.compile(findShtat);
+     Matcher matcherShtat=patternShtat.matcher(str);
+     
+     if (matcherShtat.find()){
+    	 statesMAS.add(object);
+    	 k++;
+     	String result = matcherShtat.group();
+     	if(k==c)
+         statesMAS.get(k).setShtat2(result);
+     }
+     
+     String findShir="\\-[0-9\\.]+\\,";
+     Pattern patternShir=Pattern.compile(findShir);
+     Matcher matcherShir=patternShir.matcher(str);
+     
+     if (matcherShir.find()){
+     	String result = matcherShir.group().replaceAll(",","");
+     	if(k==c)
+     	statesMAS.get(k).setShirota(Double.parseDouble(result)); 
+     	
+     	
+     }
+     
+     String findDolg="\\s[0-9\\.]+(\\])+";
+     Pattern patternDolg=Pattern.compile(findDolg);
+     Matcher matcherDolg=patternDolg.matcher(str);
+     
+     if (matcherDolg.find()){
+     	String result = matcherDolg.group().replaceAll("]","");
+     	if(k==c)
+     	 statesMAS.get(k).setDolgota(Double.parseDouble(result));
+         
+     }
+    
+     i++;
+     
+	}
+	return statesMAS.get(c);
+	}
+	public static String tooString(int c){
+		
+		if(statesMAS.get(0).shtat!=""){
+		System.out.print(statesMAS.get(c).shtat+": ");}
+	    System.out.println();
+		for(Double a : statesMAS.get(c).coord.shirota){
+		System.out.print(a+"  ");
+		}
+		System.out.println();
+		for(Double b : statesMAS.get(c).coord.dolgota){
+			System.out.print(b+"  ");
+			}
+		return null;
+		}
+}

@@ -1,0 +1,53 @@
+package laba2;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * Created by bumis on 27.02.2016.
+ */
+public class Tweet {
+    private double shirota;
+    private double dolgota;
+    private Date date;
+    private String text;
+
+    public double getShirota() {
+        return shirota;
+    }
+
+    public double getDolgota() {
+        return dolgota;
+    }
+
+    //public String getDate(Date date) throws ParseException {
+    //   return date;
+    //}
+
+    public String getText() {
+        return text;
+    }
+
+    public void setShirota(double shirota) {
+        this.shirota = shirota;
+    }
+
+    public void setDolgota(double dolgota) {
+        this.dolgota = dolgota;
+    }
+
+    public void setDate(String date) throws ParseException {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date d = format.parse(date);
+        this.date = d;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String toString(){
+        System.out.println("["+shirota + " " + dolgota+"] " + date + " " + text);
+        return null;
+    }
+}

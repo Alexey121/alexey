@@ -20,8 +20,8 @@ public void setChislo( double chislo ){
 }
 	
 	public String toString(){
-	System.out.println(text+", "+chislo);
-	return null;
+	return text+", "+chislo;
+	
 	}
 	}
 

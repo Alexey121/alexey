@@ -1,0 +1,47 @@
+package laba2;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class States{
+public  Coordinate<List> coord= new Coordinate<List>();
+
+
+public String getShtat2(){
+	return coord.shtat2;
+}
+public ArrayList<Double> getShirota(){
+	return coord.shirota;
+}
+public ArrayList<Double> getDolgota(){
+	return coord.dolgota;
+}
+
+
+public void setShtat2( String shtat2 ){
+coord.shtat2=shtat2;
+}
+public void setShirota( Double shirota ){
+coord.shirota.add(shirota);
+}
+public void setDolgota( Double dolgota ){
+coord.dolgota.add(dolgota);
+}
+
+
+
+public String toString(){
+	if(coord.shtat2!=""){
+		System.out.println();
+	System.out.print(coord.shtat2+": ");}
+    System.out.println();
+	for(Double a : coord.shirota){
+	System.out.print(a+"  ");
+	}
+	for(Double b : coord.dolgota){
+		System.out.print(b);
+		}
+	 
+	return null;
+	}
+}

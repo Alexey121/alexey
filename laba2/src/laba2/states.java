@@ -1,36 +1,41 @@
 package laba2;
 
-import java.awt.List;
+import java.util.ArrayList;
 
-public class States{
-private String shtat="   ";
-private String shir;
-private String dolg;
+public class States {
+    private String state;
+    Coordinate coordinate=new Coordinate();
 
-public String getShtat(){
-	return shtat;
-}
+    public String getState(){
+        return state;
+    }
 
-public String getShir(){
-return shir;
-}
+    public ArrayList<Double> getX(){
+        return coordinate.getX();
+    }
 
-public String getDolg(){
-return dolg;
-}
+    public ArrayList<Double> getY(){
+        return coordinate.getY();
+    }
 
-public void setShtat( String shtat ){
-this.shtat=shtat;
-}
-public void setShir( String shir ){
-this.shir=shir;
-}
+    public void setState( String state ){
+        this.state=state;
+    }
 
-public void setDolg( String dolg ){
-this.dolg=dolg;
-}
-public String toString(){
-	System.out.println(shtat+shir+","+dolg);
-	return null;
-	}
+    public void setX( Double x ){
+        coordinate.setX(x);
+    }
+
+    public void setY( Double y ){
+        coordinate.setY(y);
+    }
+
+    public String toString(){
+        System.out.println(state+ ": ");
+        for(Double x:coordinate.getX()) System.out.print(x+" ");
+        System.out.println();
+        for(Double y:coordinate.getY()) System.out.print(y+" ");
+        System.out.println();
+        return null;
+    }
 }

@@ -1,0 +1,9 @@
+package laba2;
+
+import java.util.ArrayList;
+
+public class Coordinate {
+ public ArrayList<String> shirota = new ArrayList<String>();
+ public ArrayList<String> dolgota=new ArrayList<String>();
+ public String shtat2="z";
+}

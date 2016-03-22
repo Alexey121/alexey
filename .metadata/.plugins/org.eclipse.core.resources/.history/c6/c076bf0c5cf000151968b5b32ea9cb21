@@ -1,0 +1,23 @@
+package laba2;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Count {
+	public static int Parsers(String[] mas){
+		String str;
+		int i=0;
+		int k=1;
+		while(i<mas.length &&(str = mas[i] ) != null ){
+		String findShtat="[A-Z][A-Z]";
+		 Pattern patternShtat=Pattern.compile(findShtat);
+	     Matcher matcherShtat=patternShtat.matcher(str);
+	     if (matcherShtat.find()){
+	    	 k++;
+	    	 laba2.num++;
+	     }
+		}
+		System.out.println(k);
+		return k;
+}
+}

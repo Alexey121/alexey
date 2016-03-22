@@ -20,7 +20,9 @@ public class vasyaklass {
        while( (getStr = br.readLine() ) != null )
             {k++;
             if(k>=a && k<=a+b)
-    	   fileContent.add(getStr);}
+    	   fileContent.add(getStr);
+            if(k==a+b)
+            	 break;}
     br.close();
     
     for(int i=0;i<b;i++)

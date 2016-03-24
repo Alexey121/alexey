@@ -9,7 +9,7 @@ import java.util.Date;
 public class Tweet {
     private double shirota;
     private double dolgota;
-    private Date date=new Date();
+    private Date date=null;
     private String text;
 
     public double getShirota() {

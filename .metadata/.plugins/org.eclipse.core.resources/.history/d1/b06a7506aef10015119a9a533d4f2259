@@ -9,7 +9,7 @@ import java.util.Date;
 public class Tweet {
     private double shirota;
     private double dolgota;
-    private Date date=new Date();
+    private Date date;
     private String text;
 
     public double getShirota() {
@@ -47,7 +47,7 @@ public class Tweet {
     }
 
     public String toString(){
-        System.out.println("["+shirota + " " + dolgota+"] " + date.toLocaleString() + " " + text);
+        System.out.println("["+shirota + " " + dolgota+"] " + date + " " + text);
         return null;
     }
 }

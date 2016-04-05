@@ -1,0 +1,13 @@
+package laba2;
+
+public class Generetic1 {
+
+	public void Generetic(Tweet object,String[] args){
+		
+		String str = object.getText();
+		
+		if(str.contains(args[1])) object.toString();
+		
+	}
+}
+

@@ -3,9 +3,11 @@ package laba2;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class sentimentsParser {
-	public static Sentiments Parser(String str){
-	 	Sentiments object=new Sentiments();
+public class sentimentsParser implements Interface<Sentiments> {
+	
+
+	public  Sentiments parse(String str) {
+		Sentiments object=new Sentiments();
 		String findText=".+\\,";
         Pattern patternText=Pattern.compile(findText);
         Matcher matcherText=patternText.matcher(str);
@@ -25,5 +27,6 @@ public class sentimentsParser {
             
         }
         return object;
+     // TODO Auto-generated method stub
 	}
 }

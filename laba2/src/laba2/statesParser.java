@@ -3,9 +3,12 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class statesParser {
-    public static States Parser(String str){
-        States object=new States();
+public class statesParser implements Interface<States>{
+    
+
+	@Override
+	public States parse(String str) {
+States object=new States();
         
         String findShtat="[A-Z][A-Z]";
         Pattern patternShtat=Pattern.compile(findShtat);
@@ -32,5 +35,5 @@ public class statesParser {
         }
 
         return object;
-    }
+	}
 }

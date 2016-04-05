@@ -2,12 +2,11 @@ package laba2;
 import java.text.ParseException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-/**
- * Created by bumis on 01.03.2016.
- */
-public class TweetParser {
-    public static Tweet parser(String str) {
-        Tweet tweet = new Tweet();
+public class TweetParser implements Interface<Tweet> {
+    
+	@Override
+	public Tweet parse(String str) {
+		Tweet tweet = new Tweet();
 
         String findShirota="\\[[0-9]+[0-9]*.[0-9]+[0-9]*\\,";
         Pattern patternShirota=Pattern.compile(findShirota);
@@ -46,5 +45,7 @@ public class TweetParser {
         }
 
         return tweet;
-    }
+		// TODO Auto-generated method stub
+		
+	}
 }
